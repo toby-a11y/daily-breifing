@@ -1,0 +1,63 @@
+Board: https://claude.ai/code/artifact/7f776cfe-f735-4d98-be0b-281e3b64ac08
+
+Snapshot, start of run. Nothing decided yet.
+
+YOURS TO DO
+1. Heather Parker, Wildflowers Farm, quote owed. Owed 7 days; delegated to Kari for 2-3 options.
+2. EQIP bridge loan email. Pick the segment and send it; confirm the blog post and internal links.
+3. Run the Meet recap checks. Daily pass; today's notes still to come.
+4. Stock photo and vendor resource planning. Clear image rights with Galina and LB White.
+5. MN stock take, answer Aaron. Open since Aug 17.
+6. Amy Degeorge portal fixes. Held for next week's quotes; missing freight blocks the send.
+7. Christian call review transcript. Working chat and HubSpot link on the board.
+8. Business Names Listing doc comment. Remove "Irrigation Supplies."
+9. Three calls from 9/1 with nothing on the board.
+10. Manual doc comment, ridge vent section. Open since 8/25.
+11. internal-meeting-actions. Needs one line of detail.
+12. weekly-checkin-agenda. Needs one line of detail.
+13. Backend door quoting tool. No owner.
+14. Define the audit pass and who covers what.
+15. Pinned notes on customer accounts in the new CRM.
+16. Custom shipping app on BigCommerce. No status, named twice.
+17. Mixed freight, large and small on one order. No status, named twice.
+18. Lifestyle photography. No status, named twice.
+19. Give Kari access to the content-flow system. Half a day.
+20. Kari's Q4 marketing plan, yours to review. Marketing Mtg is today, 11 to 12.
+21. Twin wall polycarb for data centers. Nobody's decided whether to chase it.
+22. Justin at Farmington Greenhouse, 32x150 quote. Now asking for an installer recommendation and ballpark cost.
+23. Brendan Matthews voicemail, returning customer. Unreturned, 860-478-0405.
+24. Bryan Case delivery, did it happen. Still unresolved.
+25. Jimmy Barsch, sandy ground question on his draft quote. Kari's blocked on this one.
+26. Erica Berman, call her back. Called three times now.
+27. Roger, still waiting on his quote. Asked again yesterday.
+28. Paul Powers, new order after his last one. 2 PL80410, 1 bag POL010.
+29. Aaron wants to move today's Strategic Review. Proposed Sep 10, 9 to 10am.
+30. Mike Champagne, North Point Farm, PASA grant tunnel quotes. Voicemail plus a wishlist for two build options, unanswered.
+31. David Morris needs a customer door drawing. Flagged in Kari's recap, separate from the closed freight quote.
+32. Garbled voicemail, callback 630-581-0822. Name transcribed as "Anna Efat."
+33. Two Zapier automations are erroring. State-from-zip and Tend Financial.
+34. Troy voicemail, greenhouse for a government customer. Unreturned.
+
+WAITING ON SOMEONE ELSE
+- CDI, tracking on invoice 9758.
+- Kari, the HubSpot contract chase. Mariana silent since 8/11.
+- Aaron, where the forklift quote landed.
+- Tim Dutcher, reply on the fan recommendation.
+- Kari, follow-up on all 36 recovered leads.
+- Kari, field note blog articles need correct tags.
+- Adam, final payment. QuickBooks link sent 8/31.
+- Svenja, structure options.
+- John Cassin, 30x100. Revisit around Sept 8.
+- Kari, Paul Simoneau final paperwork and links.
+- Chris Defeo and Graham Fishman, confirming 230V at their sites.
+- PR #258 merge and deploy.
+- Mollie Uftring, Flat Rock Farm, replacement plastic. She said hold off.
+- Pricing parity review. Gated on Aaron's six answers; now also carries 3 price-monitor findings.
+- Aaron and Kari, end wall product bundles going live.
+- Kari, logo draft 1.
+- Marcus, freight benchmarks on the Klerks plastic. Blocked on sizes from Kari.
+- Kari, form retest and wiring audit. Unblocked as of Sep 2.
+- Nine Twelve Productions, HOLLY tents. Waiting on their call and spec answers.
+- Stephanie Shipton, waiting on NRCS. Sarah is checking on a contract modification.
+
+Reasoning: subject:DECISIONLOG in:anywhere

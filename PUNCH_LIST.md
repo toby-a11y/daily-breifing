@@ -79,10 +79,44 @@ An item with no traceable source (an internal ask, a HubSpot-logged call
 with no email) gets an empty `links: []` rather than an omitted field or a
 placeholder link — the schema always has the key.
 
-## Open question
+## Daily carry-forward (as of the routine wiring it in — see `ROUTINE.md`)
 
-None of this is wired into the scheduled routine yet. If a future version
-of `ROUTINE.md`'s prompt should also build/republish this artifact every
-morning (not just the four markdown/JSON files), that needs its own
-decision — it changes what "unattended" means, since a stale punch list
-from a prior day would otherwise sit there un-refreshed.
+Now built by the scheduled routine each morning, on top of whatever's
+already live — never a from-scratch rebuild. The merge, in order:
+
+1. **Read** the current live artifact first (`Artifact action:"read"`).
+   No prior version (first run ever) means start from an empty item list.
+2. **Drop** every item whose `status` is `done`. Done means resolved —
+   it doesn't need to keep occupying the list. (Its history isn't lost:
+   the day it was marked done, that change already went into
+   `decisions/*.jsonl` as a `source:"session"` line if it happened in a
+   working session, or is simply reflected in that day's board snapshot.)
+3. **Keep**, unchanged, every remaining item (`open` or `doing`) whose
+   `id` still corresponds to something live on the board or in today's
+   briefing — same `status`, same `note`, untouched. Don't regenerate
+   its `detail`/`meta`/`links` from scratch either unless the underlying
+   fact actually changed; a viewer's in-progress note is the whole point
+   of carrying it forward.
+4. **Add** new items for anything in today's briefing (important emails,
+   messages requiring response, action items, Kari's projects) that
+   doesn't already have a matching `id`. Run the HubSpot resolving
+   process and populate `links` for these the same as any other session
+   would.
+5. **Reconcile stale ones**: an item still `open`/`doing` whose
+   underlying board entry has moved to `archived` or vanished should be
+   updated (detail note that it resolved elsewhere) or dropped — use
+   judgment, don't leave a zombie item nobody will ever click.
+
+**Stable `id` convention** (needed for step 3 to match anything):
+`kebab-case`, built from the customer/system name plus enough of the
+ask to disambiguate — `heather-parker`, `roger-gural`, `zapier-errors` —
+never date-based, never a counter. The same underlying task must produce
+the same `id` on every run, or carry-forward silently breaks and every
+day looks like a fresh list.
+
+## Failure mode
+
+If the artifact read or publish fails, the routine says so in the
+briefing's output in one line and moves on — the four files in `ROUTINE.md`
+are the routine's actual deliverable; the punch list is additive and
+shouldn't block them.

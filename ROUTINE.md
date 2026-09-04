@@ -10,7 +10,7 @@ reach it either. When this file changes, go update the trigger.
 The block below is the full prompt, ready to paste into the trigger
 configuration as-is.
 
-## Current prompt (as of 2026-09-04)
+## Current prompt (as of 2026-09-04, punch-list wiring)
 
 ```
 Generate a briefing to help me catch up, then record it and yesterday's
@@ -73,11 +73,38 @@ Commit everything with the message "briefing YYYY-MM-DD" and push. If the
 push fails, say so in the briefing output in one line; do not retry more
 than once.
 
-Do not send any email. Do not write to the board.
+PUNCH LIST
+
+After the repo commit above, also update the Punch List artifact at
+https://claude.ai/code/artifact/8f773d70-1369-4e9b-85c9-c1e8b070c653
+(full spec in PUNCH_LIST.md — item schema, status model, link formulas).
+Read its current live state first; never rebuild from scratch. Apply the
+carry-forward merge exactly as PUNCH_LIST.md defines it: drop items marked
+done, leave every remaining open/doing item's status and note untouched,
+add new items for anything in today's briefing that has no matching
+stable id yet, and run the HubSpot resolving process plus populate links
+for those new items only. If the read or publish fails, say so in the
+briefing output in one line and move on — it must not block the repo
+commit above, which is the routine's real deliverable.
+
+Do not send any email. Do not write to the Open Loops board (the
+read-only source in the first paragraph above) — the Punch List artifact
+is a separate page, and writing to it is the point of this section.
 ```
 
 ## Changelog
 
+- **2026-09-04 (punch-list wiring)** — Added a PUNCH LIST section to the
+  prompt: the routine now reads and updates the Punch List artifact every
+  run, via the carry-forward merge defined in `PUNCH_LIST.md` (drop done
+  items, preserve open/doing items' status and notes untouched, add new
+  items with links and the HubSpot resolving process applied only to
+  those). Also clarified that "do not write to the board" means the
+  read-only Open Loops board specifically, not the Punch List artifact —
+  the two are different pages and the constraint was ambiguous once the
+  routine started writing to one of them. Failure to read/publish the
+  artifact is non-blocking; the repo commit is still the routine's real
+  deliverable.
 - **2026-09-04** — Added the HubSpot deal-activity-over-stage rule to
   section 2, and the "no deal found is worth saying" instruction. Cause:
   the Heather Parker deal's `Prospect` stage read as "quote never sent,"
@@ -89,14 +116,10 @@ Do not send any email. Do not write to the board.
   pattern elsewhere. Full rule and lookup pattern documented in
   `decisions/SCHEMA.md`.
 
-## Related, not (yet) part of the automated routine
+## The Punch List artifact
 
-The **Punch List artifact** (an interactive per-day checklist built from
-the briefing, with status/notes that save back to the page, and a
-`decisions/*.jsonl` `source:"session"` trail of what got decided while
-working it) is a live-session pattern, not something the unattended daily
-run creates itself. Full spec — item schema, the three-state check-off
-model, how it persists, and how its live links get built — is in
-`PUNCH_LIST.md`. If that should become part of the automated routine too,
-this file and the trigger prompt both need to say so explicitly — right
-now the routine only produces the four files above.
+Now built and updated by this routine every run (see the PUNCH LIST
+section of the prompt above) — no longer a live-session-only pattern.
+Full spec — item schema, the three-state check-off model, how it
+persists, the daily carry-forward merge, and how its live links get
+built — is in `PUNCH_LIST.md`.

@@ -24,8 +24,22 @@ Each item in `state.items` is:
 | `detail` | string | escaped on render; the explanatory line under the title |
 | `meta` | string | escaped, monospace; short facts (amount, phone number) — omit key if empty |
 | `status` | string | `open` \| `doing` \| `done` — see below |
-| `note` | string | free text, viewer-editable |
+| `note` | string | free text, viewer-editable. **Rendered visibly on the card face whenever non-empty** (see below) — it must never be hidden behind a click, or it stops getting read before it gets overwritten. |
 | `links` | array of `{label, url}` | see **Live links** below |
+
+**Notes have no audit trail.** A note is a plain field inside the one JSON blob the page
+publishes on every edit — there is no history, no diff, no undo. Typing over an existing note
+loses the old text permanently, with nothing on the server side to recover it from. This bit
+Toby on 2026-09-04: a card's note went from `"This is for Toby to do and is parked for now but
+very close." + <link A>` to just `<link B>`, and the sentence was gone for good — not a save
+failure, just an unrecoverable overwrite of a field nobody could see without clicking first.
+Two mitigations, both now in place:
+1. The note renders on the card at all times when non-empty (fixed 2026-09-04 — previously
+   sat behind a "+ Add note" / "Edit note" toggle, which is what let it get overwritten
+   unseen). Seeing the old value before you type over it is the only real safeguard here.
+2. If a note's content matters beyond "reminder to self," log it as a `source:"session"` line
+   in `decisions/*.jsonl` (see `decisions/SCHEMA.md`) instead of relying on the card alone —
+   that log is append-only and survives a card edit that isn't.
 
 ## Interactive check-offs / status
 

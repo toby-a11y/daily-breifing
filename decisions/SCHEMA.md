@@ -44,11 +44,44 @@ Fields:
 | `item` | string | short title of the task/decision |
 | `who` | string | person the item is about/for (customer, teammate, or `"Toby"`) |
 | `topic` | string | one of: `quote`, `call`, `decision`, `ops`, `watch`, `other` |
-| `action` | string | what happened: `status_change`, `note`, `decision`, `draft_created`, `email_sent`, `infra` |
+| `action` | string | what happened: `status_change`, `note`, `decision`, `draft_created`, `email_sent`, `infra`, `correction`, `hubspot_audit` |
 | `status` | string or null | for `status_change`: `open` / `doing` / `done` |
 | `choice` | string or null | the decision made, if any |
 | `why` | string or null | reasoning, if worth capturing |
 | `links` | array of `{label, url}` | **email links, populated directly** — unlike `decisionlog_email` lines, these are stored explicitly since a session item may reference an existing thread without generating a new message of its own |
+
+## Standing rule: check deal *activity*, not deal *stage*
+
+Established 2026-09-04, after the Heather Parker deal's `Prospect` stage
+turned out to be stale while HubSpot's own email log showed the quote had
+already been sent. **A HubSpot deal's stage property is not reliable proof
+of what has or hasn't happened — the associated activity timeline (EMAIL,
+CALL, MEETING, NOTE engagements) is.** Stages get left behind when someone
+sends a follow-up without moving the pipeline forward; the engagement log
+doesn't have that failure mode.
+
+So: before reporting or acting on any customer-facing item (a quote owed, a
+callback needed, "nothing sent yet"), the check is always two steps, not one:
+
+1. Find the customer's deal(s): `search_crm_objects` (`objectType: DEAL`,
+   `query: "<name>"`).
+2. Pull the deal's associated activity, most recent first:
+   `search_crm_objects` (`objectType: EMAIL` — or `CALL`/`MEETING`/`NOTE` —
+   `filterGroups: [{"associatedWith":[{"objectType":"deals","operator":"EQUAL","objectIdValues":[<id>]}]}]`,
+   `sorts: [{"propertyName":"hs_timestamp","direction":"DESCENDING"}]`).
+
+Read the actual most-recent engagement's subject/direction/status/timestamp
+— don't stop at the deal-level `hs_lastmodifieddate` or `dealstage` alone,
+since both can lag behind real activity or get bumped by unrelated syncs.
+
+**No deal found is itself a finding** — worth stating explicitly ("no
+HubSpot deal exists yet for this ask") rather than silently skipping the
+customer, since it means the CRM has nothing to contradict *or* corroborate
+whatever the board/email says.
+
+This rule applies session-wide, not just to Heather Parker — see the
+`2026-09-04` file for the first full pass applying it across every
+customer-facing Punch List item.
 
 ## Automation note
 

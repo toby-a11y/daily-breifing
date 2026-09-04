@@ -95,6 +95,8 @@ The **Punch List artifact** (an interactive per-day checklist built from
 the briefing, with status/notes that save back to the page, and a
 `decisions/*.jsonl` `source:"session"` trail of what got decided while
 working it) is a live-session pattern, not something the unattended daily
-run creates itself. If that should become part of the automated routine
-too, this file and the trigger prompt both need to say so explicitly —
-right now the routine only produces the four files above.
+run creates itself. Full spec — item schema, the three-state check-off
+model, how it persists, and how its live links get built — is in
+`PUNCH_LIST.md`. If that should become part of the automated routine too,
+this file and the trigger prompt both need to say so explicitly — right
+now the routine only produces the four files above.

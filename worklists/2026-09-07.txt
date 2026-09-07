@@ -1,0 +1,17 @@
+Board: https://claude.ai/code/artifact/7f776cfe-f735-4d98-be0b-281e3b64ac08
+
+Wrap of this run. 4 closed, 1 skipped, rest untouched -- paused mid-queue.
+
+CLOSED TODAY
+- Heather Parker, Wildflowers Farm, quote owed. Kari sent it 9/2 5:46pm; was never actually owed, just invisible to Gmail since she sent it herself.
+- Justin Miller, inflation fan spec. Handled directly -- 60 CFM confirmed, order looped to Kari/Aaron.
+- David Morris door drawing. Finished PDF + SVG landed 8:15pm -- staged, still needs an actual send to David.
+- Marketing meeting follow-ups (3 of 4). Templates + product HTML sent to Kari 9:13pm; meeting summarized as agendas for the next 3 meetings sent 9:18pm. Only "materials to the collaborator" remains -- collaborator still unidentified.
+
+SKIPPED
+- EQIP bridge loan email.
+
+STILL IN QUEUE (untouched -- paused after item 3 of ~55)
+Everything else from this morning's snapshot is unchanged: HubSpot invoice 799683766 (suspends Sept 24), Christian Zuckerman partnership contract, Jimmy Barsch, MN stock take, Amy Degeorge portal, the Business Names doc (Aaron's new edits), Brendan Matthews (2nd voicemail), Bryan Case delivery, Roger's quote, the Zapier errors, the shay-spitzer voicemail, and the full waiting-on-someone-else list -- see the board for the complete set.
+
+Reasoning: subject:DECISIONLOG in:anywhere

@@ -10,7 +10,7 @@ reach it either. When this file changes, go update the trigger.
 The block below is the full prompt, ready to paste into the trigger
 configuration as-is.
 
-## Current prompt (as of 2026-09-14, structural fixes)
+## Current prompt (as of 2026-09-14, rot watch)
 
 ```
 Generate a briefing to help me catch up, then record it and yesterday's
@@ -67,7 +67,36 @@ BRIEFING
 4. Action items. Pending tasks or follow-ups. Roll recurring automated
    alerts (price monitor, deploy failures, Zapier) into whatever Punch List
    item already covers that system rather than listing them fresh each
-   time.
+   time — but only up to the roll-up ceiling in section 5: once a signal
+   reaches `escalate`, it comes OUT of the roll-up and stands on its own.
+
+5. Rot watch. Things that decay get escalated here instead of being
+   re-described every morning. Full spec in ROT.md. Three steps:
+
+   a. Seed today's ledger:  bin/rot-check.py --carry
+      This copies yesterday's signals forward with `last_change`
+      UNCHANGED. That is deliberate — a new day does not mean anything
+      moved.
+
+   b. Edit health/YYYY-MM-DD.json: move a signal's `last_change` forward
+      ONLY where you can point at primary-source evidence that the thing
+      actually changed (a reply sent, an invoice paid, a board write, an
+      alert cleared), and record that evidence in the `evidence` field.
+      Re-reading a stale source is not a change. Add signals for anything
+      new that can rot; retire ones that are genuinely finished by setting
+      "retired": "YYYY-MM-DD" with a reason. Use the same `id` as the
+      matching Punch List item.
+
+   c. Run bin/rot-check.py and obey what it returns — the state decides
+      the treatment, not your judgment on the day:
+        warn     — one line in its own section; may stay rolled up
+        escalate — promote OUT of any roll-up into its own numbered action
+                   item, name the owner, state the age in days
+        blocker  — lead the briefing with it, above the schedule, and ask
+                   plainly: fix it, reassign it, or consciously retire it
+      A signal with no owner cannot resolve; say so and ask for one.
+      Include the rot-check output as a "Rot watch" section when anything
+      is above `warn`, and say nothing when nothing is.
 
 Keep it concise and scannable. Skip a section with nothing notable rather
 than saying "nothing to report."
@@ -82,9 +111,12 @@ Before writing anything:
 
     git fetch origin
     git checkout -B <this session's branch> origin/main
+    bin/sync-branch.sh --check
 
 If `origin/main` does not exist, stop and say so in the briefing output
-rather than starting a new lineage.
+rather than starting a new lineage. `bin/sync-branch.sh --check` confirms
+the checkout actually landed on the trunk and prints the drift if it did
+not — cheap, and it is the check that five drifted runs did not have.
 
 Use today's date in America/Chicago as YYYY-MM-DD.
 
@@ -98,6 +130,9 @@ Use today's date in America/Chicago as YYYY-MM-DD.
 - worklists/YYYY-MM-DD.txt: the body of the newest Gmail message with
   subject:WORKLIST, if one exists from the last 3 days.
 - board/YYYY-MM-DD.json: the raw board read from above, if it succeeded.
+- health/YYYY-MM-DD.json: the staleness ledger from section 5. Always
+  write this one, every run — it is what makes rot visible across days
+  instead of being re-derived and forgotten each morning. See ROT.md.
 
 Commit everything with the message "briefing YYYY-MM-DD" and land it on
 the trunk:
@@ -111,10 +146,15 @@ git rebase origin/main` once and push again. If it still fails, say so
 in the briefing output in one line and stop — do not retry further, and
 do not work around it by pushing to a side branch.
 
-Then confirm it actually landed — `git fetch origin && git merge-base
---is-ancestor HEAD origin/main` — and say in one line whether today's
-files are on `main`. A run that writes four files but leaves them off
-the trunk has not delivered.
+Then confirm it actually landed:
+
+    bin/sync-branch.sh --verify
+
+That asserts HEAD is an ancestor of `origin/main` AND that today's
+briefing and health ledger are really present on the trunk, which a
+successful-looking push to a side branch is not. Say in one line whether
+today's files are on `main`. A run that writes five files but leaves them
+off the trunk has not delivered.
 
 PUNCH LIST
 
@@ -175,6 +215,25 @@ kept. This is the only date with a `.second-run` file, and the naming is
 deliberately awkward so it stays a one-off rather than a pattern.
 
 ## Changelog
+
+- **2026-09-14 (rot watch)** — Added section 5, "Rot watch", and
+  `health/YYYY-MM-DD.json` to the repo deliverables. Cause: the structural
+  fixes earlier the same day stopped the routine *reading* stale sources, but
+  not the older failure underneath it — things owed to people aged for weeks
+  while every briefing faithfully re-described them and nothing changed. The
+  board reached 10 days, Kari's recap 11, the erroring Zaps 11, the BFG
+  one-line reply 8, Jinyi's ship date 20. Age lived only in prose, so nothing
+  could be compared or alarmed on, and the roll-up rule quietly buried alerts
+  once the board they rolled into went stale. Now: age persists in a ledger,
+  fixed thresholds escalate a signal through ok → warn → escalate → blocker,
+  and crossing a threshold changes what the briefing is *obliged* to do —
+  including promoting an item out of a roll-up and, at blocker, leading the
+  briefing. `last_change` may only move on evidence that the thing actually
+  moved; observation is not progress. Retiring a signal on purpose is an
+  allowed outcome, letting it rot is not. Also added `bin/sync-branch.sh`,
+  which executes the trunk rules as a tested command rather than prose, and
+  whose `--verify` catches the specific failure where a run pushes
+  successfully to a side branch and delivers nothing. Full spec in ROT.md.
 
 - **2026-09-14 (structural fixes)** — Three causes fixed after the 9/14
   run found the repo fragmented across ten branches. (1) The REPO

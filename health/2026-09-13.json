@@ -1,0 +1,124 @@
+{
+  "date": "2026-09-13",
+  "generated_at": "2026-09-13T19:16:00-05:00",
+  "note": "First ledger. Every last_change below was established from a primary source during the 2026-09-13 run (HubSpot, QuickBooks, Gmail, the board read) — not inferred from a previous briefing's prose. See ROT.md.",
+  "signals": [
+    {
+      "id": "open-loops-board",
+      "label": "Open Loops board writes",
+      "kind": "source",
+      "last_change": "2026-09-04",
+      "evidence": "Newest record data.updatedAt is 2026-09-04T21:30Z; today's 91-record read is byte-identical to the 09-10 and 09-11 snapshots.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "kari-daily-recap",
+      "label": "Kari's daily recap",
+      "kind": "source",
+      "last_change": "2026-09-03",
+      "evidence": "No recap in from:kari newer_than:6d. She is demonstrably active (ran seven call transcripts 9/11), so this is a reporting gap, not a work gap.",
+      "owner": "Kari",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "jinyi-wu-fulfillment",
+      "label": "Jinyi Wu has no actual ship date",
+      "kind": "promise",
+      "last_change": "2026-08-25",
+      "evidence": "Kari quoted her 2-3 weeks on 8/25 (her own transcript check), putting delivery in the week of Sep 8. Paid $17,206 on 9/2. That window has never been replaced with a real date; Aaron has asked three times.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "manual-doc-comments",
+      "label": "Aaron's manual comments (ridge vent, hoops)",
+      "kind": "promise",
+      "last_change": "2026-08-25",
+      "evidence": "Ridge-vent comment in _CT Greenhouse Manual Current 8-22-26 open since 8/25; a second on ASSEMBLING THE HOOPS added 9/8. Both addressed to Toby, neither answered.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "roger-gural-duplicate-deal",
+      "label": "Duplicate Closed-Lost deal 64303902903",
+      "kind": "infra",
+      "last_change": "2026-08-25",
+      "evidence": "Two deals, same name, same $13,047.48, created four hours apart on 8/25; one sits Closed Lost while he is actively buying. Skews the pipeline until merged or deleted.",
+      "owner": "Toby",
+      "thresholds": {"warn": 7, "escalate": 14, "blocker": 30}
+    },
+    {
+      "id": "zapier-errors",
+      "label": "Two Zaps erroring (state-from-zip, Tend Financial #2)",
+      "kind": "alert",
+      "last_change": "2026-09-03",
+      "evidence": "Both alerting since 9/3 and never opened. Rolled up in the briefing every day since, which is exactly how it reached ten days.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "bfg-nda-confirmation",
+      "label": "BFG data room blocked on one sentence",
+      "kind": "promise",
+      "last_change": "2026-09-06",
+      "evidence": "Nick Vernacchio (SSG) asked 9/6 13:55 to confirm no changes were made prior to execution. Thread unchanged since. Blocks data room + full asset schedule, Case No. 26-11284.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "david-morris-door",
+      "label": "David Morris door drawing, finished and unsent",
+      "kind": "promise",
+      "last_change": "2026-09-04",
+      "evidence": "Finished PDF + editable SVG in the inbox since 9/4 20:15. Needs only a send.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "paul-simoneau-payment",
+      "label": "Paul Simoneau $32,130 signed, unpaid",
+      "kind": "promise",
+      "last_change": "2026-09-02",
+      "evidence": "INV-2821 ($21,282) and INV-2822 ($10,848) both due 9/2, both open. Quotes accepted 8/31. Deal still reads Revisions with nothing logged since 9/2. Its twin (Jeff Dowling) cleared 9/11.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "deploy-preview-canceled",
+      "label": "ct-greenhouse-platform deploy previews canceled",
+      "kind": "alert",
+      "last_change": "2026-09-10",
+      "evidence": "Eleven consecutive canceled previews across two briefings (#366, #370-375, then #381-384), plus PR Verify failing on #383 (a2c41f4). Reads as broken preview config rather than eleven problems.",
+      "owner": null,
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "mark-wilson-ship-date",
+      "label": "Mark Wilson not told his ship date",
+      "kind": "promise",
+      "last_change": "2026-09-09",
+      "evidence": "Said \"I think either day works\" on 9/9 07:10. Aaron scheduled the 23rd on 9/11. Nobody has told Mark. Also carries $4,442.48 in 1-30.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "apps-script-untitled",
+      "label": "Google Apps Script \"Untitled project\" failing nightly",
+      "kind": "alert",
+      "last_change": "2026-09-12",
+      "evidence": "Failed 9/12 03:51 and 9/13 04:06. New failure class; no board item covers it and nobody knows what the script does.",
+      "owner": null,
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "grealing-email-bounce",
+      "label": "Mail to Grealing Daniel bouncing (typo'd address)",
+      "kind": "alert",
+      "last_change": "2026-09-12",
+      "evidence": "Bouncing to grealingd1@ail.com since 9/12 16:17; HubSpot and the calendar both hold grealingd1@gmail.com. Gmail is near its final retry. He is owed a 24x48 Grower Plus quote and is called Tuesday.",
+      "owner": "Toby",
+      "thresholds": {"warn": 1, "escalate": 3, "blocker": 7}
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T08:05:00-05:00",
+  "note": "Seeded with bin/rot-check.py --carry from 2026-09-14; last_change moved only where a primary source shows the thing itself moved. Four moved (kari-daily-recap, jinyi-wu-fulfillment, alan-jeppesen-windbraces, grealing-email-bounce); two of those retired as genuinely finished. Four signals added (erica-berman-delivery-date, justin-miller-rollup, erin-polycarb-quote, ahrefs-crawl-failed). Deliberately NOT moved: bfg-nda-confirmation, david-morris-door, mark-wilson-ship-date and carrie-calvo-payment, whose Punch List cards were marked done in yesterday's session but whose primary sources show nothing sent and no money received. A card status is not evidence — see ROT.md.",
+  "signals": [
+    {
+      "id": "john-schubert-plastic",
+      "label": "John Schubert never told his plastic is in",
+      "kind": "promise",
+      "last_change": "2026-08-17",
+      "evidence": "NOT moved. Thread 'John Schubert' re-read today: last message is still Aaron's 9/10 16:29 nudge to Kari. No message to John exists anywhere on it, and HubSpot still returns zero deals for 'Schubert'. Aaron told Kari on 8/17 18:46 the 48x100 was in; she said 8/18 14:51 she would tell him. John called twice on 9/10 (9:05am, 12:11pm) asking. 29 days.",
+      "owner": "Kari",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "manual-doc-comments",
+      "label": "Aaron's manual comments (ridge vent, hoops)",
+      "kind": "promise",
+      "last_change": "2026-08-25",
+      "evidence": "NOT moved. No new comment notification from _CT Greenhouse Manual Current 8-22-26 in the last 3 days; neither the 8/25 ridge-vent comment nor Aaron's 9/8 ASSEMBLING THE HOOPS comment has been answered. The 9/14 Weekly Sync re-assigned the same task a third time; re-assignment is not resolution. 21 days.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "open-loops-board",
+      "label": "Open Loops board writes",
+      "kind": "source",
+      "last_change": "2026-09-04",
+      "evidence": "Re-read today: 91 records, newest data.updatedAt still 2026-09-04T21:30:00Z (marketing-mtg-followups). Byte-identical to the 09-10, 09-11, 09-13 and 09-14 snapshots. Historical only; the Punch List is the live source.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "roger-gural-duplicate-deal",
+      "label": "Duplicate Closed-Lost deal 64303902903",
+      "kind": "infra",
+      "last_change": "2026-08-25",
+      "evidence": "Unchanged. Two deals, same name, same $13,047.48, created four hours apart on 8/25; one sits Closed Lost while he is actively buying. Reviewed and deliberately let go on 9/14, but letting it go is not the same as merging or deleting it, so it still skews the pipeline.",
+      "owner": "Toby",
+      "thresholds": {"warn": 7, "escalate": 14, "blocker": 30}
+    },
+    {
+      "id": "zapier-errors",
+      "label": "Erroring Zaps (state-from-zip, Tend Financial #2, QB New Customer to HS)",
+      "kind": "alert",
+      "last_change": "2026-09-03",
+      "evidence": "NOT moved. No new Zapier alert has arrived since 9/14 15:10Z, but none of the three has been opened either — quiet is not fixed. The state/zip-to-HubSpot Zap and Tend Financial #2 have been erroring since 9/3 (12 days); 'QB New Customer to HS' joined 9/14 with two alerts.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "david-morris-door",
+      "label": "David Morris door drawing, finished and unsent",
+      "kind": "promise",
+      "last_change": "2026-09-04",
+      "evidence": "NOT moved, despite the Punch List card being marked done in yesterday's session. Primary source disagrees: to:dmorris@polymershapes.com returns nothing newer than Toby's 9/3 17:11 freight estimate. The finished PDF + editable SVG have been in the inbox since 9/4 20:15 and no message carrying them exists. A card status is not a send.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "bfg-nda-confirmation",
+      "label": "BFG data room blocked on one sentence",
+      "kind": "promise",
+      "last_change": "2026-09-06",
+      "evidence": "NOT moved, despite the Punch List card being marked done in yesterday's session. A from:me search for Vernacchio/SSG/BFG/'prior to execution' in the last 3 days returns nothing. Nick Vernacchio (SSG) asked on 9/6 13:55 to confirm no changes were made prior to execution; that sentence still blocks the data room and the full asset schedule, Case No. 26-11284. No HubSpot deal exists for BFG at all. Hits blocker tomorrow.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "mark-wilson-ship-date",
+      "label": "Mark Wilson not told his ship date",
+      "kind": "promise",
+      "last_change": "2026-09-09",
+      "evidence": "NOT moved, despite the Punch List card being marked done in yesterday's session. No sent mail to Mark in the last 2 days, and he still carries $4,442.48 in the 1-30 bucket on today's 09-15 aging. He said 'either day works' on 9/9 07:10; Aaron scheduled the 23rd on 9/11. If he was told by phone there is no record of it.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "deploy-preview-canceled",
+      "label": "ct-greenhouse-platform deploy previews canceled",
+      "kind": "alert",
+      "last_change": "2026-09-10",
+      "evidence": "Not fixed, and accelerating. Four more canceled since yesterday's ledger — #388 (6b9b271, 9/14 21:05Z), #389 (1544c95, 9/14 21:59Z), #391 (05c45cf, 9/15 03:40Z), #392 (85c85c7, 9/15 04:05Z) — on top of #385 and #386. That is eighteen consecutive canceled previews. Reads as broken preview configuration, not eighteen problems. Still nobody owns it.",
+      "owner": null,
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "carrie-calvo-payment",
+      "label": "Carrie Calvo $25,934 — promised date has now passed",
+      "kind": "promise",
+      "last_change": "2026-09-11",
+      "evidence": "NOT moved, despite the Punch List card being marked done in yesterday's session. The 09-15 A/R aging still shows the full $25,934 in the 1-30 bucket against an 8/31 due date, and she is still the #2 overdue customer. Kari promised Aaron on 9/11 15:09 'Carrie is paying either later today or Monday'; Monday has now passed, so the promise has slipped twice. One of the three MN houses, load-bearing for the 10/5 run.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "apps-script-untitled",
+      "label": "Google Apps Script \"Untitled project\" failing nightly",
+      "kind": "alert",
+      "last_change": "2026-09-12",
+      "evidence": "Failed again 9/15 04:06Z, making four nights running (9/12 03:51, 9/13 04:06, 9/14 04:06, 9/15 04:06). Nobody knows what the script does and no Punch List item covers it.",
+      "owner": null,
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "erica-berman-delivery-date",
+      "label": "Erica Berman's delivery-window question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "evidence": "New signal. Her 9/14 10:57 CDT 'How much is due now?' was answered at 11:42 CDT (half now, balance one week before delivery) — that part is closed. She came back at 14:34 CDT: 'so they are coming end of Oct beg of Nov so mid Oct? or ? What do you think?' That question is still unanswered, and it is the one that sets her payment schedule against INV-2812's $39,842 due 9/17.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "justin-miller-rollup",
+      "label": "Justin Miller's roll-up sides question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "evidence": "New signal. He emailed Toby direct on 9/14 11:46 CDT: 'What would I need to add roll up sides to my new 50x14 greenhouse?' Kari raised it in her 9/14 recap saying she could not find a deal where we sold him a tunnel and asking whether to book a call. HubSpot actually holds three Justin Miller deals, including Gothic Greenhouse 9/2/26 at $39,396.24 — so the answer to Kari is yes, it exists.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "erin-polycarb-quote",
+      "label": "Erin (Edible Prairie Project) — polycarbonate quote and Wednesday call",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "evidence": "New signal. Inbound 9/14 18:07 CDT for polycarbonate end-wall sheeting for 3 high tunnels shipped to Gillette WY; Toby offered a call, she replied 19:13 CDT with the spec (3 FarmTek 30x72, 12' centre, same doors) and asked for Wednesday rather than Tuesday. So the call is owed for 9/16 and the quote can be drafted from the spec now. No HubSpot deal or contact exists for her or Edible Prairie Project — searches return zero.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 7}
+    },
+    {
+      "id": "ahrefs-crawl-failed",
+      "label": "Ahrefs site audit crawl failing to start",
+      "kind": "alert",
+      "last_change": "2026-09-15",
+      "evidence": "New signal, and a state change rather than a repeat: the audit used to complete with findings (health 92, 19 errors, oversized images). Today at 06:26 CDT it reported 'Your crawl failed to start because of an error' — the audit is no longer running at all, so the site has gone unmonitored rather than merely untidy.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "kari-daily-recap",
+      "label": "Kari's daily recap",
+      "kind": "source",
+      "last_change": "2026-09-14",
+      "evidence": "MOVED, and this one is a genuine resolution. '9/14 > Daily Email Recap' arrived from kari@ctgreenhouse.com on 9/14 16:49 CDT — the first written recap since 9/3, ending an 11-day gap. It carries five live items (Chad Weatherly, Selana Ford, Justin Miller, Karl Schmid, Grealing Daniel). The revive-or-retire decision the last four briefings kept asking for has answered itself: she revived it.",
+      "owner": "Kari",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "alan-jeppesen-windbraces",
+      "label": "Wind-brace callers (Alan Jeppesen resolved, Karl Schmid quoted)",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "evidence": "MOVED. Alan Jeppesen was reached by Kari 9/14 11:32 and is satisfied. On the Karl Schmid half, Toby answered Kari's spec questions 9/14 12:05 CDT (54\" WIND54 braces), asked her at 14:18 CDT to build a quote for 32 braces plus bands, bolts, nuts and washers, and Kari delivered it 16:32 CDT as deal 65044101034. Stays open only because that quote is sitting on Toby for review before it reaches Karl.",
+      "owner": "Toby",
+      "thresholds": {"warn": 2, "escalate": 5, "blocker": 10}
+    },
+    {
+      "id": "jinyi-wu-fulfillment",
+      "label": "Jinyi Wu has no actual ship date",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "retired": "2026-09-15",
+      "evidence": "RESOLVED AND RETIRED. She chased at 9/14 12:28 CDT ('So when is it shipping? I haven't got a call yet'); Toby answered at 12:34 CDT with the week of 10/5 or 10/12, and she replied at 12:56 CDT 'Yes, that will work! Thank you!' The decision was made at the Weekly Sync and the customer has now been told and has agreed. Retired because it is genuinely finished.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    },
+    {
+      "id": "grealing-email-bounce",
+      "label": "Mail to Grealing Daniel bouncing (typo'd address)",
+      "kind": "alert",
+      "last_change": "2026-09-14",
+      "retired": "2026-09-15",
+      "evidence": "RESOLVED AND RETIRED. Kari corrected the address in HubSpot and in the Portal on 9/14 12:00 CDT ('This should be good now'). The permanent-failure notice arrived 9/14 14:19 CDT and names only the typo'd grealingd1@ail.com, confirming the exposure was limited to that one original message. Today's 11:00 call invite is on grealingd1@gmail.com, the deal exists (65040481345, $11,116) and Kari put two quotes on it 9/14 16:48 CDT. Nothing left to watch.",
+      "owner": "Toby",
+      "thresholds": {"warn": 1, "escalate": 3, "blocker": 7}
+    },
+    {
+      "id": "paul-simoneau-payment",
+      "label": "Paul Simoneau $32,130 signed, unpaid",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "retired": "2026-09-14",
+      "evidence": "RESOLVED AND RETIRED 9/14. INV-2821 $21,282.00 and INV-2822 $10,848.00 both paid by paul@helmsteadfarm.com; still absent from the 09-15 A/R aging.",
+      "owner": "Toby",
+      "thresholds": {"warn": 3, "escalate": 7, "blocker": 14}
+    }
+  ],
+  "carried_from": "2026-09-14"
+}

@@ -177,8 +177,8 @@
       "id": "punch-list-publish",
       "label": "Punch List artifact carry-forward did not land",
       "kind": "infra",
-      "last_change": "2026-09-14",
-      "evidence": "NOT moved as of the read at the top of this run: the live artifact was STILL version 1789410352-1f6c, state.updatedAt 2026-09-14T18:10:00Z, header 'Monday, September 14 - Punch List'. The 09-15, 09-16 and 09-17 publishes all failed to land. Toby is being pointed at a list that is four days stale, and the notes and statuses on it are his own, which is exactly the content that cannot be reconstructed from anywhere else. 4 days.",
+      "last_change": "2026-09-18",
+      "evidence": "MOVED - it published, and the root cause is now known. The live artifact read at the top of this run was still version 1789410352-1f6c (2026-09-14). The first publish attempt today was REFUSED with 'You hadn't viewed the live version of this artifact' - the saved source must be viewed with the Read tool, and this run (like the three before it, which read the file with shell commands instead) had not done that. After Reading all 1388 lines and re-fetching the artifact, the publish succeeded: the live page is now version 1789735813-a803, header 'Friday, September 18 - Punch List', 54 items, state.updatedAt 2026-09-18T12:55:00Z - verified by reading index.html back. That is the actual fix for three days of silent failures; it is a procedural requirement, not an outage. 0 days.",
       "owner": "Toby",
       "thresholds": {
         "warn": 1,

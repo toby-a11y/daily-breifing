@@ -1,0 +1,860 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T07:40:24-05:00",
+  "note": "Gmail, QuickBooks and Zapier connectors are all disconnected (needs_reconnect) - see the connector-outage signal. Section 2 of today's briefing was rebuilt from HubSpot's engagement log, Google Calendar, and the board artifact. Ten signals moved on primary-source evidence and two retired; five email-only signals could not be measured at all and are carried verbatim, so their ages are floors rather than measurements.",
+  "signals": [
+    {
+      "id": "john-schubert-plastic",
+      "label": "John Schubert never told his plastic is in",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "evidence": "MOVED after 35 days - he got through. HubSpot CALL 117179785610: inbound from John Schubert (+16072379977) to Kari Warwick 2026-09-21T17:36:53Z, 100.8s, status COMPLETED, Ai Call Purpose 'Operations'. A completed 100-second conversation, not a voicemail - the first actual contact since Aaron told Kari on 8/17 the 48x100 was in. No AI recap was generated, so the content is unrecorded and it is NOT retired: nothing yet evidences that the plastic news was delivered or an order placed. Owner stays Kari; one line in her next recap closes it.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "manual-doc-comments",
+      "label": "Aaron's manual comments (ridge vent, hoops)",
+      "kind": "promise",
+      "last_change": "2026-08-25",
+      "evidence": "NOT moved, 28 days. No new evidence either way this run - Gmail is unavailable (see tool gaps) so the comment threads in _CT Greenhouse Manual Current 8-22-26 could not be re-read directly. What is newly verifiable is the parallel case: the Cat tunnel instructions doc was opened and left uncommented yesterday, which is the same failure one document over. The engineering answer (embo wire lock and vinyl flashing) has existed since the 9/15 New Markets notes.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "bfg-nda-confirmation",
+      "label": "BFG data room blocked on one sentence",
+      "kind": "promise",
+      "last_change": "2026-09-06",
+      "evidence": "NOT moved, 16 days, and the runway is down to 10. Bids close Oct 2, auction Oct 6, Case No. 26-11284. No engagement to Nick Vernacchio or SSG appears anywhere in the 9/19-9/22 HubSpot sweep, and HubSpot holds no BFG deal. Unverifiable via Gmail this run, but a sentence that has never been sent in 16 days is not likely to have been sent in the last three.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "open-loops-board",
+      "label": "Open Loops board writes",
+      "kind": "source",
+      "last_change": "2026-09-04",
+      "evidence": "NOT moved, 18 days. Re-read today via ArtifactData: 91 records, newest data.updatedAt across all of them is 2026-09-04T21:30:00.000Z (marketing-mtg-followups), identical to the 09-10 through 09-21 snapshots. Snapshot written to board/2026-09-22.json. Historical only; the Punch List remains the live carry-forward source.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "roger-gural-duplicate-deal",
+      "label": "Duplicate Closed-Lost deal 64303902903",
+      "kind": "infra",
+      "last_change": "2026-08-25",
+      "evidence": "NOT moved, 28 days. Duplicate Closed-Lost deal 64303902903 still overstates the pipeline by $13,047.48. Reviewed and let go on 9/14; letting it go is not merging or deleting it.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 7,
+        "escalate": 14,
+        "blocker": 30
+      }
+    },
+    {
+      "id": "zapier-errors",
+      "label": "Erroring Zaps (state-from-zip, Tend Financial #2, QB New Customer to HS)",
+      "kind": "alert",
+      "last_change": "2026-09-03",
+      "evidence": "NOT moved, 19 days. UNVERIFIABLE this run - the Gmail connector is disconnected (needs_reconnect), so the Zapier alert stream could not be checked at all. Carried at 2026-09-03 per ROT.md's rule that a run which cannot establish movement carries the previous value verbatim. Four Zaps remain in the erroring set. Payments continued to flow through the unverified QB invoice-paid notification path: INV-2848 (Robyn Dunn) and INV-2805 + INV-2807 (Mark Wilson), all 2026-09-21.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "david-morris-door",
+      "label": "David Morris door drawing, finished and unsent",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "evidence": "RESOLVED AND RETIRED. The drawing was sent. Toby emailed dmorris@polymershapes.com at 9/16 16:02Z with all four Polymer Shapes colleagues still copied: 'Take a look at the attached drawing and let me know what you think.' David replied 16:14 - 'I really like the drawing' - and the thread ran on to 17:00. Twelve days of a finished PDF sitting unsent, and a promise broken in front of four extra people, ended in one send. The live follow-on (his doors may vary in width, so hinged vs sliding is now the question) is tracked as polymer-shapes-door-type rather than by keeping this one open.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "retired": "2026-09-17"
+    },
+    {
+      "id": "mark-wilson-ship-date",
+      "label": "Mark Wilson not told his ship date",
+      "kind": "promise",
+      "last_change": "2026-09-09",
+      "evidence": "RETIRED - resolved, and the signal's premise was partly wrong. The ship date WAS communicated, in a thread that lives in Aaron's mailbox and had never surfaced in HubSpot's engagement log: Aaron to maw6@ymail.com 2026-09-14 07:46 'I made a plan with the trucking company to load up your order on Tuesday the 22nd for delivery the next day on the 23rd. Does that still work on your end?', Mark confirmed 9/15. Mark checked in 2026-09-22T14:53:34Z; Aaron replied 15:50:43Z (117238677828) 'still planning for tomorrow' and again 19:01:52Z (117251757845): 'We got your order all loaded up and it will be headed your way in the morning. The driver said he would be there mid-morning, and he'll give you a call when he's getting close.' Delivery lands TODAY. Nothing left to chase.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "retired": "2026-09-23"
+    },
+    {
+      "id": "deploy-preview-canceled",
+      "label": "ct-greenhouse-platform deploy previews canceled",
+      "kind": "alert",
+      "last_change": "2026-09-10",
+      "evidence": "NOT moved, 12 days, still ownerless. UNVERIFIABLE this run: Gmail is disconnected so GitHub notification mail could not be read, and this session's GitHub access is scoped to toby-a11y/daily-breifing only, so ct-greenhouse-platform cannot be queried directly. Carried verbatim. A signal with no owner cannot resolve.",
+      "owner": null,
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "nolts-price-tracker",
+      "label": "Nolt's pricing never loaded into the price tracker",
+      "kind": "promise",
+      "last_change": "2026-09-09",
+      "evidence": "NOT moved, 13 days. Contact with Nolt's did happen - Kari SENT 'Modine Heater Quote' to paul@noltsgreenhouse.com 2026-09-21T22:03:04Z (117205819019) and got an auto-reply - but that is sourcing a heater for Christensen Cod, not loading the 2027 pre-order list or the variable-controller pricing into the tracker. Talking to the supplier is not updating the tracker.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "apps-script-untitled",
+      "label": "Google Apps Script \"Untitled project\" failing nightly",
+      "kind": "alert",
+      "last_change": "2026-09-12",
+      "evidence": "NOT moved, 10 days, still ownerless. UNVERIFIABLE this run - the nightly failure notices arrive by email and Gmail is disconnected. Carried verbatim at 2026-09-12.",
+      "owner": null,
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "erica-berman-delivery-date",
+      "label": "Erica Berman's delivery-window question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "evidence": "RETIRED as superseded and resolved. Kari handed scheduling to Aaron 9/17 22:35Z; the size question that replaced it is closed as of Toby's 9/18 13:30Z answer (see erica-berman-size-spec). Nothing is owed on the delivery window itself.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "erin-polycarb-quote",
+      "label": "Erin (Edible Prairie Project) - polycarbonate quote and the call she asked for",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "evidence": "NOT moved, 6 days. No call for Erin on today's calendar, no engagement in the sweep, and HubSpot still returns zero deals and zero contacts for Erin or Edible Prairie Project.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 7
+      }
+    },
+    {
+      "id": "punch-list-publish",
+      "label": "Punch List artifact carry-forward did not land",
+      "kind": "infra",
+      "last_change": "2026-09-18",
+      "evidence": "Held at 9/18. Today's read returned version 1789994920-b8a1 (54 items, updatedAt 2026-09-21T13:05:00Z), so the 9/21 publish did land and nobody has published over it since. The procedural fix stands: build any republish from the saved artifact source file.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 3,
+        "blocker": 7
+      }
+    },
+    {
+      "id": "chey-spitzer-clamps-invoice",
+      "label": "Chey Spitzer waiting on a top-up invoice he has offered to pay",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "evidence": "MOVED AND RETIRED. The top-up invoice was sent: Toby (writing as Kari) emailed spitzercheyo@gmail.com 9/18 15:09Z, 'HERE is the invoice for the additional clamps.' Kari's 9/18 recap confirms the outcome - 'Chey - He paid for his additional clamps.' Toby also answered Aaron 9/18 13:34Z: 'Nothing to do on your end at this point.' Six days from his 9/15 ask to the invoice, but it is closed. The residue - Kari's unanswered inventory question and the $50.78 overpayment - is tracked as chey-spitzer-inventory-question.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "robyn-dunn-nrcs-spec",
+      "label": "NRCS rejected Robyn Dunn's model over post gauge",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "evidence": "RESOLVED AND RETIRED. NRCS accepted the clarification. Robyn wrote 9/16 11:46 that she had explained the frame is 2 3/8\" with 3 purlins, and again at 17:29: 'I just heard back and the kit is approved based on that clarification! So I can proceed with the order today.' The spec fight is over. What replaced it - she is ready to buy and is waiting on a final quote with the purlin and fan add-ons - is tracked as robyn-dunn-final-quote.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "retired": "2026-09-18"
+    },
+    {
+      "id": "jinyi-heater-decision",
+      "label": "Jinyi Wu's heater order \u2014 Aaron is waiting on a yes/no",
+      "kind": "promise",
+      "last_change": "2026-09-17",
+      "evidence": "RESOLVED AND RETIRED. Toby answered Aaron point by point 9/17 20:54Z: on the delayed-model heater, 'Lets stick with it for now. The ship date is now relatively soon hopefully?' Aaron confirmed 9/18 01:06Z 'I sent Jinyi's box out yesterday.' Her separate post-driver rental question is carried as jinyi-postdriver-question rather than by keeping this one open.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "retired": "2026-09-18"
+    },
+    {
+      "id": "grealing-shipping-question",
+      "label": "Grealing Daniel's shipping-savings question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "evidence": "MOVED again, second consecutive day. Toby SENT 'Re: Quotes' to grealingd1@gmail.com twice on 2026-09-22, at 17:17:15Z and 20:51:37Z, following Monday's 18m20s call. Kari's 9/22 recap confirms the state independently: 'Grealing - Updated Quote sent. Will send him final paperwork once I get the go ahead from him.' Both action items from the call (final broker freight quote, finalised configuration) have now been actioned and the ball is with the customer. $11,116.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "stephanie-shipton-windspec",
+      "label": "Stephanie Shipton's high-wind question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "evidence": "RESOLVED AND RETIRED. Toby answered on 9/16 19:35Z ('Yes it is! It will do well in a windy spot') and the thread has moved on to sidewall height with Chris Werje, which Toby also answered 9/17 21:15Z. Kari's 9/17 recap records her calling and emailing Stephanie as well. Nothing is owed; the $41,507.40 deal (64310979643) is a watch item, not a promise.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "retired": "2026-09-18"
+    },
+    {
+      "id": "neveg-tradeshow-registration",
+      "label": "NE Veg tradeshow booths held but not registered",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "evidence": "MOVED - Toby's half is done. Toby SENT 'Re: 2026 NE Vegetable and Fruit Conference (D)' to tradeshow.neveg@gmail.com 2026-09-22T19:29:14Z: 'Thanks Chris! I registered and Aaron will be sending a check.' Registration is no longer the open step. Owner stays Aaron and the signal stays live because the remaining step - physically mailing the check - is exactly the part that leaves no trace in any system available here.",
+      "owner": "Aaron",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "apps-script-product-name-search",
+      "label": "Google Apps Script \"Product Name Search\" now failing too",
+      "kind": "alert",
+      "last_change": "2026-09-15",
+      "evidence": "NOT moved, 7 days, still ownerless. UNVERIFIABLE this run for the same reason as apps-script-untitled. Carried verbatim at 2026-09-15.",
+      "owner": null,
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "justin-miller-rollup",
+      "label": "Justin Miller's roll-up sides question",
+      "kind": "promise",
+      "last_change": "2026-09-17",
+      "evidence": "Held at 9/17. No call to 952-334-9119 in the 9/21-9/22 sweep and no engagement to him. Still unevidenced either way; not moved on absence of proof.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "alan-jeppesen-windbraces",
+      "label": "Wind-brace callers (Karl Schmid quote released)",
+      "kind": "promise",
+      "last_change": "2026-09-15",
+      "evidence": "NOT moved, 7 days. No engagement to khscel@gmail.com in the 9/19-9/22 sweep and no mention of Karl Schmid in Kari's 9/21 recap. Toby released the quote to Kari on 9/15; it has still not gone out. Owner stays Kari.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "kari-daily-recap",
+      "label": "Kari's daily recap",
+      "kind": "source",
+      "last_change": "2026-09-22",
+      "evidence": "MOVED - filed again, four consecutive working days now (9/17, 9/18, 9/21, 9/22). '9/22 > Daily Email Recap' SENT to toby@ctgreenhouse.com 2026-09-22T21:15:58Z (117268153718). Contents: Amy Degeorge (follow-up needed?), Robyn Dunn (offer of help), and FYI items - Grealing updated quote sent, Hawaii meeting scheduled Friday, and a direct scheduling question back to Toby about moving the Website Walkthrough to Monday. The filing habit is no longer the risk; the unanswered question inside it is, and that has its own signal.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "ahrefs-crawl-failed",
+      "label": "Ahrefs site audit crawl failing to start",
+      "kind": "alert",
+      "last_change": "2026-09-21",
+      "evidence": "RESOLVED AND RETIRED - the crawl ran. After failing to start 9/15 through 9/20 (latest failure 9/20 11:06Z), a real Site Audit report arrived today 9/21 11:25Z: '230 internal URLs were analyzed. Health Score 92 - Errors 19 - Warnings 223 (+10) - Notices 216 (+9)', subject 'Image file size too large: 15 URLs'. Analysed URLs and delta counts are proof of a completed crawl, not another failure notice. The site is monitored again; the 19 errors are ordinary SEO backlog, not a rot signal.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "carrie-calvo-payment",
+      "label": "Carrie Calvo $25,934",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "retired": "2026-09-16",
+      "evidence": "RESOLVED AND RETIRED. She paid. QuickBooks INV-2817 ($25,934, due 8/31) now returns balance_amount 0, and she has dropped off the 09-16 A/R aging entirely after being the #2 overdue customer yesterday. HubSpot deal 64130424652 closed 2026-09-15T13:07Z to match. The promise that slipped twice ('today or Monday', 9/11) has landed, and the 10/5 MN run is no longer exposed on her account.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "jinyi-wu-fulfillment",
+      "label": "Jinyi Wu has no actual ship date",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "retired": "2026-09-15",
+      "evidence": "RESOLVED AND RETIRED 9/15. She was told the week of 10/5 or 10/12 and replied 'Yes, that will work! Thank you!' Her live follow-ons (ground posts ahead of the kit, post-driver rental, the delayed heater) are tracked under jinyi-heater-decision rather than by reviving this one.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "grealing-email-bounce",
+      "label": "Mail to Grealing Daniel bouncing (typo'd address)",
+      "kind": "alert",
+      "last_change": "2026-09-14",
+      "retired": "2026-09-15",
+      "evidence": "RESOLVED AND RETIRED 9/15. Kari corrected the address in HubSpot and the Portal; the 11:00 call on 9/15 went ahead and he replied from grealingd1@gmail.com the same evening, which proves delivery works. His open shipping question is tracked as grealing-shipping-question.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 3,
+        "blocker": 7
+      }
+    },
+    {
+      "id": "paul-simoneau-payment",
+      "label": "Paul Simoneau $32,130 signed, unpaid",
+      "kind": "promise",
+      "last_change": "2026-09-14",
+      "retired": "2026-09-14",
+      "evidence": "RESOLVED AND RETIRED 9/14. INV-2821 $21,282.00 and INV-2822 $10,848.00 both paid; still absent from the 09-16 A/R aging.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "polymer-shapes-door-type",
+      "label": "Polymer Shapes - hinged vs sliding door decision",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "MOVED - two-way contact after 6 days of silence, and a date is now set. Toby SENT 'Re: Greenhouse Doors' from info@ 2026-09-22T16:59:16Z (cc Lahood, Clark, Wilson, Cimato); David Morris replied 17:09:57Z: 'I'm going up to see the customer Thursday to measure all of the openings. I'll give you a call on the way to go over any details.' Toby: 'Sounds good!' 17:19:11Z. The hinged-vs-sliding decision is now scheduled against a Thursday 9/24 call with real opening measurements behind it, which is a better input than deciding blind. Still NO HubSpot deal tracks this data-centre opportunity."
+    },
+    {
+      "id": "selana-ford-freight",
+      "label": "Selena Ford quote blocked on a freight number from Toby",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "NOT moved, 6 days. No engagement to Selena Ford anywhere in the 9/19-9/22 HubSpot sweep, and HubSpot still holds NO deal for her - re-checked. Her 9/18 call has now been followed by two working days of silence on the freight number Kari needs."
+    },
+    {
+      "id": "green-grove-quote-audit",
+      "label": "Green Grove quote pricing discrepancies - Toby to audit",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "NOT moved, 6 days. No engagement to NathanZ@greengrovesupply.com in the sweep and no mention in Kari's 9/21 recap. The audit Toby was assigned by name on 9/16 has not started; SQ100247 ($27,055.27) is due 10/11."
+    },
+    {
+      "id": "jonas-delivery-date-conflict",
+      "label": "Jonas Shear told 10/12; Aaron is loading 10/5",
+      "kind": "promise",
+      "last_change": "2026-09-16",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "NOT moved, 6 days. No engagement to Jonas Shear in the sweep. He is still holding the week of 10/12 that Kari gave him on 9/16 while Aaron loads 10/5. He has PAID IN FULL. Ten working days of runway left and the conflict is unspoken."
+    },
+    {
+      "id": "chc-controller-it",
+      "label": "CHC wireless controller - their CIO is waiting on Toby",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "RESOLVED AND RETIRED. Toby answered CHC's Chief IT Officer 9/18 20:37Z: 'Hi Jamey, Please see the link below for the information. I think you may have the best luck contacting the vendor directly for your technical questions since they may exceed my knowledge on it.' Separately Toby answered Ken at Griffin Electrical on the grow-lights/fans thread 9/18 20:46Z with the attachment and the VBG20 fan spec. Both CHC threads are off Toby's desk.",
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "troy-humphrey-contract",
+      "label": "Troy Humphrey verbally approved - contract not yet sent",
+      "kind": "promise",
+      "last_change": "2026-09-17",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "RETIRED - Kari's remaining action is evidenced. Beyond the 9/17 PandaDoc signature, Intuit recorded 'Payment received: Invoice #INV-2841-(Troy Humphrey)' for $11,744.50 on 9/17 21:58Z, so the final invoice was raised AND paid, and Kari forwarded it to Aaron 9/17 22:32Z: 'This order is ready to schedule. Toby has agreed to make an exception and the remaining balance will be a net 30.' Signed, invoiced, paid, handed to fulfilment.",
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "robyn-dunn-final-quote",
+      "label": "Robyn Dunn is approved and waiting on the final quote",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "MOVED AND RETIRED. The final quote went out. HubSpot logs 'CT Greenhouse Order Details' as a SENT email engagement on deal 62487378871 at 9/18 18:37Z (object 117105834915), and Toby told her on the old chain 18:48Z 'I just sent a follow up email in a new chain.' She engaged the same night. The deal amount has since moved from $24,820 to $21,866.57 (last modified 9/20 14:35Z). The live successor is the tax exemption - see robyn-dunn-tax-exempt.",
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "jinyi-postdriver-question",
+      "label": "Jinyi Wu's post-driver rental question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "MOVED - the thread she was falling through was picked up. 'Re: Kit Delivery - Jinyi Wu' SENT to jinyicocowu@gmail.com 2026-09-21T22:06:29Z (117206702462); she replied 2026-09-22T01:38:43Z (117222069879). Whether the 9/14 post-driver rental question was specifically answered is not visible - neither body synced to HubSpot - but direct contact was re-established after 7 days. Kit still loads with Carrie's and Jonas's on 10/5."
+    },
+    {
+      "id": "onesmus-plastic-handoff",
+      "label": "Onesmus Mutio plastic handoff - now booked for Friday 9/25 9am",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 3,
+        "blocker": 7
+      },
+      "evidence": "MOVED - the Friday offer he was sent has become a booked slot. Kari created calendar event 1kaids8qcdg0n8shttkoihvc5s 'Delivery Ground Posts & Plastic' on 2026-09-22T21:09:04Z for Friday 2026-09-25 09:00-10:00 America/Chicago, and her 9/22 recap refers to it directly: 'so that you'll have enough time to deliver the ground posts and plastic.' Four days of silence ended 9/21, the reply came the same night, and the handoff is now on the calendar rather than in an inbox. He still carries $11,500 at 91+."
+    },
+    {
+      "id": "christian-silage-tarps",
+      "label": "Christian Zuckerman - 16 silage tarps for the Maui HFUF project",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "MOVED substantially after 4 days. Toby SENT 'Re: Silage tarp order' to kuwaleridgefarms@gmail.com 2026-09-22T19:13:34Z: freight-vs-home-delivery could save materially on shipping (home delivery quoted $2,580.69), asked whether Kaipo can take a business drop or hand-unload; reported Kencove approached for the fence posts he could not source; laid out the full Hawaii kit roster (Christian 2x 34x100 + 1x 24x40; Stephanie 4x 24x60; Comp 1x 24x40; Soo Sun 2x 30x60; John Cassin 1x 30x100); and said the quotes are worked up and need a call alongside the 8/28 call analysis. Forwarded to Kari 17:44:04Z asking her to quote the Maui silage tarps from Farm Plastic Supply off the previous order history. Deal 35560228709. What is still NOT done is the partnership contract and pricing structure from the 8/28 call - and Toby's own note, 'After writing it all down I guess we need to do a phone call,' is now on the calendar as the Hawaii Review Meeting Fri 9/25 12:30pm CDT."
+    },
+    {
+      "id": "western-botanical-polycarb",
+      "label": "Western Botanical Medicine - 13 twinwall sheets to California",
+      "kind": "promise",
+      "last_change": "2026-09-17",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "NOT moved, 5 days. Andrew's 9/17 freight question on 13 twinwall sheets to Whitethorn CA is still unanswered and no engagement to him appears in the sweep. HubSpot holds NO deal and no company record. Note the pattern: Grealing's freight question got an 18-minute call yesterday; Selena's and Andrew's did not."
+    },
+    {
+      "id": "erica-berman-size-spec",
+      "label": "Erica Berman - Aaron blocked on 30x40 vs 30x48",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "RESOLVED AND RETIRED. Toby answered Aaron on the Erica payment thread 9/18 13:30Z: 'The change would only be reducing the length from 48\\' to 40\\'. If possible you should start ordering parts so they are ready when she is ready.' That fixes the range Aaron was blocked on. Toby also created a named 'Signed V2: Final' version of her live quote and told Aaron and Kari 9/18 15:21Z, with the rule 'All new changes to the quote must be completed or approved by either Aaron or Toby'. Aaron could not find that version 9/20 17:45Z and Toby sent him the direct link 9/21 00:24Z. Covering was already settled (Steve's base and cap). Fulfilment now has a spec and a bounded change.",
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "steve-deveaux-quotes-send",
+      "label": "Steve Deveaux - two quotes built, call is today",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "MOVED AND RETIRED - the quotes reached him. HubSpot shows two SENT email engagements associated with deals 65113068812 / 65078043036: 'First Draft Quotes' 9/17 21:36Z and 'Re: First Draft Quotes' 9/18 18:09Z. This is the activity-not-stage check doing its job; the deal stages had not moved.",
+      "retired": "2026-09-21"
+    },
+    {
+      "id": "website-walkthrough-toby-actions",
+      "label": "Five website actions assigned to Toby on 9/17",
+      "kind": "promise",
+      "last_change": "2026-09-17",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "NOT moved, 5 days. None of Toby's five website actions from the 9/17 walkthrough shows evidence of completion. Note for context: a 'Website weekly check in' for today 1-2pm EDT was accepted by Aaron on 9/21 (engagement 117221888865) but does not appear on Toby's own calendar."
+    },
+    {
+      "id": "cat-tunnel-instructions",
+      "label": "Cat tunnel instructions need comments before tomorrow's ship",
+      "kind": "promise",
+      "last_change": "2026-09-20",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 2,
+        "blocker": 4
+      },
+      "evidence": "RETIRED - the owner closed it himself. Aaron to toby@ and kari@ 2026-09-22T21:21:11Z (117272422418): 'I added a couple pictures here today and am calling this ready to go. If you want to add it to a resource library in HS or anywhere else a pdf version is attached. Let me know if you do have any comments on it at any point.' The Monday comment deadline was tied to Mark's Tuesday ship; that kit is loaded and rolling. Comments are now optional and unblocking, so this stops being a promise that can rot.",
+      "retired": "2026-09-23"
+    },
+    {
+      "id": "robyn-dunn-tax-exempt",
+      "label": "Robyn Dunn - tax exempt permit received, tax not yet removed",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "MOVED and RESOLVED. 'Re: CT Greenhouse Order Details' SENT to robynjerard@hotmail.com 2026-09-21T14:10:12Z (117160706169); 'Payment received: Invoice #INV-2848-(Robyn Dunn)' 2026-09-21T19:03:40Z, forwarded to Aaron 19:10. Confirmed live on CALL 117194378817: inbound from Robyn Dunn (+15712288636) to Kari 2026-09-21T19:04:07Z, 3m02s - Kari confirms payment received and processed. Tax question answered, invoice reissued, invoice paid. Retired; the delivery-date question it leaves behind is tracked as robyn-dunn-delivery-date.",
+      "retired": "2026-09-22",
+      "retired_reason": "Resolved end to end on 2026-09-21: tax question answered, invoice reissued, INV-2848 paid, and she confirmed receipt by phone. The delivery-date question it leaves behind is carried as robyn-dunn-delivery-date."
+    },
+    {
+      "id": "maria-lafontan-tax-exempt",
+      "label": "Maria LaFontan - tax exempt permit received, unread",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "MOVED - her permit was acted on. 'Re: Plastic Quote' SENT to marialafontan@gmail.com 2026-09-21T13:57:46Z (117173804846), answering the 9/19 message that had sat unread. NOT retired: unlike Robyn Dunn there is no reissued-invoice or payment engagement yet on deal 65122250311, so the tax removal is not evidenced as complete."
+    },
+    {
+      "id": "chey-spitzer-inventory-question",
+      "label": "Chey Spitzer - Kari's inventory / MN shipment question unanswered",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "NOT moved, 4 days. Kari's 9/21 recap does not carry Chey forward at all - it lists only Amy Degeorge, Grealing and Robyn Dunn - so her 9/18 inventory question (and whether Aaron adds it to the MN shipment) is now unanswered AND unrepeated. The $50.78 overpayment from doubling the cross connectors to 40 units is still unreconciled."
+    },
+    {
+      "id": "ian-gibson-silage-tarp",
+      "label": "Ian Gibson - Aaron promised him a call today",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 3,
+        "blocker": 7
+      },
+      "evidence": "MOVED - Aaron's promise was kept on the day. HubSpot CALL 117187353367: Kari outbound to +18608782573 (the number Aaron gave) 2026-09-21T17:41:58Z, 50.7s, voicemail left about silage tarps asking for sizing and a callback, leaving 860-341-8707 and her email. (The AI transcript garbles 'Ian' to 'Ski' and 'silage' to 'Yage'.) Toby also replied to Aaron, 'Re: Silage tarp for Ian Gibson' SENT 2026-09-21T17:44:46Z. Ball is now with Ian; still NO HubSpot deal."
+    },
+    {
+      "id": "trisha-wisdom-call",
+      "label": "Trisha Wisdom - call today 11:00, no deal and no brief",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "MOVED - the call was attempted on time but did not connect. CALL 117184191063: Toby outbound to Trisha wisdom (+17855246364) 2026-09-21T16:00:18Z, 43.7s, COMPLETED with 'Summaries are currently not generated for short calls or voicemails' - a voicemail, not a conversation. Ball is nominally with her. HubSpot still holds the contact (247994717878, Smoky Hill Gardens LLC) and ZERO deals, so there is still no brief and nothing in the CRM tracking it."
+    },
+    {
+      "id": "maureen-nuzzo-schedule",
+      "label": "Maureen Nuzzo (Cheshire schools) - offered today, never confirmed",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "NOT moved, 4 days. Kari offered Monday or Friday on 9/18; Monday passed with nothing on the calendar and no engagement to Maureen in the sweep. Friday is the remaining offer and nobody has re-asked."
+    },
+    {
+      "id": "sherry-tftafeh-quote",
+      "label": "Sherry Tftafeh - NRCS specs in, quote built, not yet sent",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "MOVED - the built quote finally reached her. 'Re: CT Greenhouse Quote - Sherry Tftafeh' SENT to gandsfriendlyfarm@gmail.com 2026-09-21T14:16:32Z (117174257418). Deal 65119141694, $13,918, built 9/18 and unsent for three days while she was explicitly comparison shopping ('I just need your best price as i am checking others'). Now with her."
+    },
+    {
+      "id": "cdi-doors-install-manual",
+      "label": "CDI Doors install manual - request bounced, re-sent, no reply",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "MOVED - routed to a named human. 'Re: Invoice #9758 Instal Manual' SENT to sammy.chapman@cdidoors.com 2026-09-21T13:53:55Z (117171473751), replacing the support@cdidoors.com address that hard-bounced on 9/19. No reply yet. Same CDI order whose R+L delivery receipt (PRO# 277981605) has never been confirmed."
+    },
+    {
+      "id": "qb-deleted-item",
+      "label": "QuickBooks deleted product/service blocking a transaction",
+      "kind": "infra",
+      "last_change": "2026-09-18",
+      "owner": "Aaron",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      },
+      "evidence": "NOT moved, 4 days. No reply from Aaron in the sweep. Compounded this run: the QuickBooks connector is still disconnected (needs_reconnect), so the audit trail Toby asked about cannot be checked from here either."
+    },
+    {
+      "id": "john-pm-offer-draft",
+      "label": "Project Manager offer draft parked with Aaron",
+      "kind": "promise",
+      "last_change": "2026-09-18",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 5,
+        "escalate": 10,
+        "blocker": 21
+      },
+      "evidence": "Held at 9/18. No new evidence; below threshold."
+    },
+    {
+      "id": "stephanie-shipton-delivery-window",
+      "label": "Stephanie Shipton said GO and leaves the island tomorrow",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 3,
+        "blocker": 6
+      },
+      "evidence": "MOVED - answered inside the window, on the last day she was reachable. Toby SENT 'Re: Farm Map' to stephanie@kiikiifarmprovisions.com 2026-09-22T20:56:53Z (117272125756): 'We will send you the link to pay and e-sign in the next couple of days. I am traveling this week but Kari and I should get you something on Friday.' She replied 20:58:00Z (117268189022): 'Great! We are leaving tomorrow for 3 weeks. I'll try to keep an eye out for it.' The delivery-after-10/12 constraint is accepted and the deal ($41,507.40, 64310979643) is verbally closed. The promise has CHANGED SHAPE, not ended: a pay-and-e-sign link is now owed BY FRIDAY 9/25 to someone who is off island until 10/12. Tight thresholds retained for that reason."
+    },
+    {
+      "id": "robyn-dunn-delivery-date",
+      "label": "Robyn Dunn paid and needs a delivery date for overwintering",
+      "kind": "promise",
+      "last_change": "2026-09-21",
+      "owner": "Aaron",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "New signal, successor to robyn-dunn-tax-exempt. On CALL 117194378817 (inbound to Kari 2026-09-21T19:04:07Z, 3m02s) Robyn confirmed her payment and asked about the shipping timeline; Kari estimated 3-4 weeks and said Aaron would coordinate the delivery date directly. Robyn stated urgency because she needs to overwinter. Kari forwarded the payment confirmation to Aaron 19:10:15Z and closed her 9/21 recap with 'Robyn Dunn - Let me know if there's anything I can help with to get this ordered for her.' Owner Aaron; the commitment to call her was made on our behalf, as with Ian Gibson."
+    },
+    {
+      "id": "christensen-cod-heater-quote",
+      "label": "Christensen Cod - 310 affinity heater quote and curtain sourcing",
+      "kind": "promise",
+      "last_change": "2026-09-23",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      },
+      "evidence": "MOVED today. Paul Shoemaker (Nolt's) replied 'RE: Modine Heater Quote' to kari@ctgreenhouse.com 2026-09-23T11:32:23Z with the number Kari needed: the figure she had was list, and 'Dealer price is $5,558.32.' Kari asked the clarifying question at 2026-09-22T20:28:13Z and chased through an out-of-office. She can now quote Cody Christensen (deal 65167885110, created 9/21, last modified today 11:33Z - i.e. she is already acting on it). No Toby action unless the margin needs approval."
+    },
+    {
+      "id": "connector-outage",
+      "label": "Gmail, QuickBooks and Zapier connectors disconnected",
+      "kind": "infra",
+      "last_change": "2026-09-21",
+      "evidence": "NEW signal, and it should have existed two runs ago - this is the thing that has been degrading every other reading. ListConnectors today: Gmail installState 'needs_reconnect' (connected false, enabledInChat true), Intuit QuickBooks 'needs_reconnect', Zapier 'needs_reconnect'. QuickBooks first reported unauthorised in the 9/21 briefing, Gmail in the 9/22 briefing; both are still down today, so the outage is 3 days old for QB and 2 for Gmail. Concrete cost to this run: decisions/2026-09-23.jsonl and worklists/2026-09-23.txt could not be written because subject:DECISIONLOG and subject:WORKLIST are unreachable, and five email-only signals (both Apps Scripts, the Zaps, the deploy previews, the NEVEG check) cannot be measured at all - their ages are floors, not measurements. A disconnected connector silently manufacturing 'nothing changed' is precisely the quiet rot this repo exists to stop, so it is now tracked as a signal rather than as a paragraph at the top of a briefing.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 2,
+        "blocker": 4
+      }
+    },
+    {
+      "id": "website-walkthrough-reschedule",
+      "label": "Kari's Website Walkthrough reschedule question needs an answer",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "evidence": "NEW signal. Kari's 9/22 recap asks Toby directly: 'I'm thinking maybe we move the Website walk through to Monday so that you'll have enough time to deliver the ground posts and plastic. You have two customer calls as well that day starting at noon. LMK what you prefer.' The calendar corroborates the crunch - Friday 9/25 currently runs Delivery Ground Posts & Plastic 9:00-10:00, Website Walkthrough 10:00-11:00, George Sawyer 12:00, Hawaii Review 12:30, Mary Concklin 13:00, Marketing Meeting 13:45-15:15, all America/Chicago. A one-word answer today; a scramble if it waits until Friday morning. Tight thresholds because the event it governs is two days out.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 1,
+        "escalate": 2,
+        "blocker": 3
+      }
+    },
+    {
+      "id": "renae-mogen-install-help",
+      "label": "Renae Mogen needs install help; Kari owes her a callback via Toby",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "evidence": "NEW signal. HubSpot CALL 117245994016: inbound from Renae Mogen (+17017701833) to Kari Warwick 2026-09-22T16:56:29Z, 2m48s, COMPLETED. She is an EXISTING customer, not a lead - deal 43771808268 'Renae Mogen : Gothic High Tunnel 9/15/25', $19,832.73, closed 2025-10-20 - now setting up the high tunnel she bought and stuck on installing bug netting and the corner plastic pieces. Two action items logged: Kari to contact Toby for the setup guidance, and Kari to call or text Renae back with it. The dependency runs through Toby, so this stalls silently if he is on a set all day.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "kristin-nelson-voicemail",
+      "label": "Kristin Nelson voicemail unreturned",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "evidence": "NEW signal. HubSpot CALL 117272466825: missed call WITH VOICEMAIL from Kristin Nelson (+16122252331) to CT Greenhouse (+18603418707) 2026-09-22T21:37:45Z, status MISSED. Logged after hours and nothing in the log since. A 612 number is Minneapolis-St Paul, i.e. the Afton MN side of the business. No HubSpot deal and no owner is assigned on the call record; entering it here so it does not join the standing unreturned-voicemail pile unnoticed.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 2,
+        "escalate": 5,
+        "blocker": 10
+      }
+    },
+    {
+      "id": "steve-deveaux-duplicate-deals",
+      "label": "Steve Deveaux has two identical deals at $20,609.57",
+      "kind": "infra",
+      "last_change": "2026-09-17",
+      "evidence": "NEW signal, found while checking activity rather than stage per SCHEMA.md. Two deals exist for the same customer with the same amount and the same stage: 65113068812 'Steve Deveaux : Gothic High Tunnel 9/17/26' created 2026-09-17T20:26:23Z, and 65078043036 'Steve Deveaux : Gothic High Tunnel 9/17/26 V2' created 24 minutes later at 20:50:53Z, both $20,609.57 USD, both stage 147710342, both last modified 2026-09-22T16:45Z right after the call. That double-counts $20,609.57 of pipeline. Same failure as roger-gural-duplicate-deal and the Mike Champagne pair - a V2 quote creating a second deal rather than revising the first. Worth fixing as a pattern, not just as a row.",
+      "owner": "Toby",
+      "thresholds": {
+        "warn": 3,
+        "escalate": 7,
+        "blocker": 14
+      }
+    },
+    {
+      "id": "soo-sun-hawaii-financing",
+      "label": "Soo Sun blocked by the Hawaii NRCS advance-payment freeze",
+      "kind": "watch",
+      "last_change": "2026-09-23",
+      "evidence": "NEW signal, from her reply today. Soo Sun to kari@ctgreenhouse.com 2026-09-23T01:33:28Z: 'we are still interested, but when I checked a few days ago NRCS still has a freeze at the state level on advance payments in Hawaii. I am thinking to try to go through the Hawaii State Dept of Ag for a microloan because I think it would be a safe bet for them if we already have the EQIP grant. I will let you know how it goes!' Carries 2x 30x60 in the Hawaii roster Toby sent Christian yesterday. Nothing is owed by us right now - she is driving it - but the state-level freeze is a structural risk to every Hawaii deal in that roster, not just hers, and Friday's Hawaii Review Meeting is the place to look at it. Tracked as a watch so it does not get rediscovered cold.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 5,
+        "escalate": 10,
+        "blocker": 20
+      }
+    },
+    {
+      "id": "kencove-dealer-account",
+      "label": "Kencove dealer application submitted; awaiting account",
+      "kind": "promise",
+      "last_change": "2026-09-22",
+      "evidence": "NEW signal, opened already in motion. Sarah Dudley (sdudley@kencove.com) sent the dealer application 2026-09-22T12:58Z; Toby forwarded it to Kari 19:15:55Z from a flight; Kari returned it completed 20:01:35Z ('For the how-we-heard-about-them question I just put referral'); Toby submitted it to Sarah 20:18:31Z cc Kari. This is the unblock for the fence posts Toby told Christian he 'came up empty handed' on, so it has a downstream customer waiting. Kari is the named contact for follow-ups.",
+      "owner": "Kari",
+      "thresholds": {
+        "warn": 4,
+        "escalate": 8,
+        "blocker": 15
+      }
+    }
+  ],
+  "carried_from": "2026-09-22"
+}

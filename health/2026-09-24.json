@@ -179,8 +179,8 @@
       "id": "punch-list-publish",
       "label": "Punch List artifact carry-forward did not land",
       "kind": "infra",
-      "last_change": "2026-09-23",
-      "evidence": "MOVED - the carry-forward landed. Republished today as version 45 from the saved live source file (read first, edited on top of that JSON, never rebuilt from scratch), per the procedural fix. All 71 open/doing items carried forward with status and note untouched - none were marked done since yesterday, so nothing was dropped; 16 cards had detail/meta refreshed where leaving them would mislead, and 5 new cards were added (holly-tents-onsite, website-walkthrough-reschedule, renae-mogen-install, soo-sun-hawaii-financing, kencove-dealer-account). 76 items live.",
+      "last_change": "2026-09-24",
+      "evidence": "MOVED - the carry-forward landed. Republished today as VERSION 46 from the saved live source file (read first, edited on top of that JSON, never rebuilt from scratch), per the procedural fix. All 76 open/doing items carried forward with status and note untouched - none had been marked done since yesterday, so nothing was dropped. 20 cards had detail/meta refreshed where leaving them would mislead (holly-tents-onsite had become a card about a day that already happened; polymer-shapes-door-type now reads TODAY; bfg-bid-deadline 9 days -> 8; manual-ridge-vent 29 -> 30; connector-outage day 3 -> day 4), and 6 new cards were added (brian-marshall-quote, louis-medina-shade-cloth, beth-kendall-order, lee-cline-order, marksville-freight-gap, erica-berman-delivery-window). Five cards were marked resolved in their detail with 'safe to mark done' rather than dropped, since only the viewer marks done: kencove-dealer-account, website-walkthrough-reschedule, christensen-cod-heater-quote, erica-berman-size-spec, grealing-daniel-quote. 82 items live.",
       "owner": "Toby",
       "thresholds": {
         "warn": 1,
